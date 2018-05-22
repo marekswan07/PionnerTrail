@@ -9,6 +9,7 @@ public class Player implements Serializable {
     //instance variables for this class (attributes)
     private String name;
     private double bestTime;
+    private String[] stringArray = {"test0", "test1","test2"};
     
     //constructor
     public Player() {
@@ -22,6 +23,10 @@ public class Player implements Serializable {
     
     public double getBestTime(){
         return bestTime;
+    }
+    
+    public String[] getStringArray(){
+        return stringArray;
     }
     
     //setters
@@ -43,6 +48,8 @@ public class Player implements Serializable {
     
     
     //extra methods, reason for them not listed in the project
+    
+    //returns a unique hash for each variable
     @Override
     public int hashCode() {
         int hash = 7;
@@ -51,6 +58,7 @@ public class Player implements Serializable {
         return hash;
     }
 
+    //ensures that 2 values are the same
     @Override
     public boolean equals(Object obj) {
         if (this == obj) {
